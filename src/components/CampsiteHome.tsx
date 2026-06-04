@@ -23,14 +23,14 @@ export default function CampsiteHome({ theme = "cinematic" }: { theme?: string }
           <main>
             <Hero />
             <BrandStatement />
-            <StorySection />
             <TrustBar />
             <CampingFeatures />
             <Mobilheime />
             <Kinder />
-            <Aktivitaeten />
             <LageAnreise />
             <Galerie />
+            <Aktivitaeten />
+            <StorySection />
             <Booking />
           </main>
           <Footer />
