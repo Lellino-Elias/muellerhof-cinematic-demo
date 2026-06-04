@@ -142,7 +142,7 @@ export default function Booking() {
                   <Magnetic>
                     <button
                       onClick={() => notify("Buchungsanfrage wird per E-Mail gesendet (Demo).")}
-                      className="rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-[#14100a] transition-colors hover:bg-gold-soft"
+                      className="rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-gold-soft"
                     >
                       Jetzt buchen
                     </button>

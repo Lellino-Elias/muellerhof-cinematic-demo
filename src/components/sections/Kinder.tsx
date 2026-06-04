@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Img from "@/components/ui/Img";
 import Reveal from "@/components/ui/Reveal";
 import { campsite } from "@/content/campsite.config";
 
@@ -13,7 +13,7 @@ export default function Kinder() {
         {/* Lead image */}
         <Reveal>
           <div className="relative aspect-[5/4] overflow-hidden rounded-[2rem] border border-line">
-            <Image
+            <Img
               src={lead.image.src}
               alt={lead.image.alt}
               fill

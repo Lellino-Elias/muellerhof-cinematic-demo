@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Img from "@/components/ui/Img";
 import Reveal from "@/components/ui/Reveal";
 import { campsite } from "@/content/campsite.config";
 
@@ -21,7 +21,7 @@ export default function Galerie() {
           {campsite.galerie.map((img, i) => (
             <Reveal key={img.src} delay={(i % 4) * 70}>
               <div className="group relative mb-4 break-inside-avoid overflow-hidden rounded-2xl border border-line">
-                <Image
+                <Img
                   src={img.src}
                   alt={img.alt}
                   width={800}

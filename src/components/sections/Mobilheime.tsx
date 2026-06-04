@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Img from "@/components/ui/Img";
 import Reveal from "@/components/ui/Reveal";
 import { NavLink } from "@/components/ui/Placeholder";
 import { campsite } from "@/content/campsite.config";
@@ -25,16 +25,16 @@ export default function Mobilheime() {
         <div className="grid gap-6 md:grid-cols-3">
           {items.map((m, i) => (
             <Reveal key={m.name} delay={i * 110}>
-              <article className="group flex h-full flex-col overflow-hidden rounded-[2rem] border border-line bg-bg">
+              <article className="group flex h-full flex-col overflow-hidden rounded-[2rem] border border-line bg-surface">
                 <div className="relative aspect-[4/3] overflow-hidden">
-                  <Image
+                  <Img
                     src={m.image.src}
                     alt={m.image.alt}
                     fill
                     sizes="(max-width:768px) 100vw, 33vw"
                     className="object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-110"
                   />
-                  <span className="absolute left-4 top-4 rounded-full bg-bg/70 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-ink backdrop-blur-md">
+                  <span className="absolute left-4 top-4 rounded-full bg-black/45 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white backdrop-blur-md">
                     {m.kind}
                   </span>
                 </div>

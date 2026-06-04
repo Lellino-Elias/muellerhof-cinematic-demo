@@ -26,12 +26,12 @@ export default function MapClient({
       center={[lat, lng]}
       zoom={13}
       scrollWheelZoom={false}
-      style={{ height: "100%", width: "100%", background: "#0d1513" }}
+      style={{ height: "100%", width: "100%", background: "#efe8da" }}
       attributionControl={false}
     >
       <TileLayer
-        url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
-        // CARTO dark tiles fit the cinematic theme; OSM standard as fallback option.
+        url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+        // CARTO light tiles for the bright editorial theme.
       />
       <Marker position={[lat, lng]} icon={pin}>
         <Popup>{label}</Popup>

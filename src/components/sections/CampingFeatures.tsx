@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Img from "@/components/ui/Img";
 import Reveal from "@/components/ui/Reveal";
 import { campsite } from "@/content/campsite.config";
 
@@ -20,39 +20,28 @@ export default function CampingFeatures() {
         </Reveal>
 
         <div className="grid gap-5 md:grid-cols-3 md:grid-rows-2">
-          {/* Lead feature — large */}
+          {/* Lead feature — large image with white text */}
           <Reveal className="md:col-span-2 md:row-span-2">
-            <article className="group relative h-full min-h-[340px] overflow-hidden rounded-[2rem] border border-line">
-              <Image
-                src={lead.image.src}
-                alt={lead.image.alt}
-                fill
-                sizes="(max-width:768px) 100vw, 66vw"
-                className="object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/20 to-transparent" />
+            <article className="group relative h-full min-h-[360px] overflow-hidden rounded-[2rem]">
+              <Img src={lead.image.src} alt={lead.image.alt} fill sizes="(max-width:768px) 100vw, 66vw" className="object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" />
               <div className="absolute bottom-0 left-0 p-8 md:p-10">
-                <h3 className="font-display text-3xl font-bold text-ink md:text-4xl">{lead.title}</h3>
-                <p className="mt-2 max-w-md text-sm text-ink/80">{lead.text}</p>
+                <h3 className="font-display text-3xl font-bold text-white md:text-4xl">{lead.title}</h3>
+                <p className="mt-2 max-w-md text-sm text-white/85">{lead.text}</p>
               </div>
             </article>
           </Reveal>
 
-          {/* Remaining features */}
+          {/* Remaining — light surface cards: image on top, text below */}
           {rest.map((f, i) => (
-            <Reveal key={f.title} delay={i * 90}>
-              <article className="group relative h-full min-h-[200px] overflow-hidden rounded-[2rem] border border-line bg-bg2">
-                <Image
-                  src={f.image.src}
-                  alt={f.image.alt}
-                  fill
-                  sizes="(max-width:768px) 100vw, 33vw"
-                  className="object-cover opacity-70 transition-all duration-[1.2s] ease-out group-hover:scale-105 group-hover:opacity-90"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/55 to-bg/10" />
-                <div className="absolute bottom-0 left-0 p-6">
-                  <h3 className="font-display text-xl font-bold text-ink">{f.title}</h3>
-                  <p className="mt-1.5 text-xs leading-relaxed text-ink/75">{f.text}</p>
+            <Reveal key={f.title} delay={i * 80}>
+              <article className="group flex h-full flex-col overflow-hidden rounded-[2rem] border border-line bg-surface">
+                <div className="relative aspect-[16/10] overflow-hidden">
+                  <Img src={f.image.src} alt={f.image.alt} fill sizes="(max-width:768px) 100vw, 33vw" className="object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105" />
+                </div>
+                <div className="p-5">
+                  <h3 className="font-display text-lg font-bold text-ink">{f.title}</h3>
+                  <p className="mt-1.5 text-xs leading-relaxed text-muted">{f.text}</p>
                 </div>
               </article>
             </Reveal>
