@@ -3,6 +3,7 @@ import SmoothScroll from "@/components/SmoothScroll";
 import Header from "@/components/sections/Header";
 import Hero from "@/components/sections/Hero";
 import BrandStatement from "@/components/sections/BrandStatement";
+import StorySection from "@/components/sections/StorySection";
 import TrustBar from "@/components/sections/TrustBar";
 import CampingFeatures from "@/components/sections/CampingFeatures";
 import Mobilheime from "@/components/sections/Mobilheime";
@@ -22,6 +23,7 @@ export default function CampsiteHome({ theme = "cinematic" }: { theme?: string }
           <main>
             <Hero />
             <BrandStatement />
+            <StorySection />
             <TrustBar />
             <CampingFeatures />
             <Mobilheime />

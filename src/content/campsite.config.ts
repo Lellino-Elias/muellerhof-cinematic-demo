@@ -38,6 +38,8 @@ export type BookingCategory = {
   perExtraGuest?: number;
 };
 
+export type StoryChapter = { no: string; kicker: string; title: string; text: string };
+
 export interface CampsiteConfig {
   name: string;
   shortName: string;
@@ -74,6 +76,7 @@ export interface CampsiteConfig {
     adresse: string;
     coords: { lat: number; lng: number };
   };
+  story?: { kicker: string; heading: string; intro: string; chapters: StoryChapter[] };
   languages: string[];
   nav: NavItem[];
 }
@@ -207,6 +210,19 @@ export const campsite: CampsiteConfig = {
     facebook: "https://www.facebook.com/muellerhof/",
     adresse: "Keutschach am See · Kärnten · Österreich",
     coords: { lat: 46.5897, lng: 14.2272 },
+  },
+
+  story: {
+    kicker: "Dein Urlaub",
+    heading: "Vom ersten Gedanken bis zum Lagerfeuer",
+    intro:
+      "Wie sich Urlaub bei uns anfühlt — vom ersten Träumen zu Hause bis zum letzten Funken am Feuer.",
+    chapters: [
+      { no: "01", kicker: "Die Vorfreude", title: "Es beginnt mit einer Idee", text: "Der Moment, in dem die Sehnsucht nach Freiheit größer wird als der Alltag — und der Urlaub gebucht ist." },
+      { no: "02", kicker: "Die Anreise", title: "Einfach losfahren", text: "Hinter jeder Kurve ein Stück mehr Ruhe. Der Weg zu uns ist schon der halbe Urlaub." },
+      { no: "03", kicker: "Das Ankommen", title: "Zuhause auf Zeit", text: "Markise raus, Stühle aufgestellt, Lichterkette an — in Minuten wird aus dem Stellplatz ein Lieblingsort." },
+      { no: "04", kicker: "Das Genießen", title: "Abende, die bleiben", text: "Lagerfeuer, gute Gespräche, ein Himmel voller Sterne. Genau dafür kommt man wieder." },
+    ],
   },
 
   languages: ["DE", "EN", "NL"],
