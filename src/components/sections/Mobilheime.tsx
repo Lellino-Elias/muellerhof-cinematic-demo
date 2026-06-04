@@ -13,7 +13,6 @@ export default function Mobilheime() {
         <Reveal>
           <div className="mb-12 flex flex-wrap items-end justify-between gap-6 md:mb-16">
             <div className="max-w-2xl">
-              <p className="eyebrow mb-4">Komfortabel wohnen</p>
               <h2 className="font-display text-[clamp(2rem,4.5vw,3.6rem)] font-extrabold leading-[1.02] tracking-tight text-ink">
                 {heading}
               </h2>

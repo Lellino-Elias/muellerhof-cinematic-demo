@@ -27,7 +27,6 @@ export default function Kinder() {
         {/* Text + feature list */}
         <div>
           <Reveal>
-            <p className="eyebrow mb-4">Für die Kleinen</p>
             <h2 className="font-display text-[clamp(2rem,4.5vw,3.6rem)] font-extrabold leading-[1.02] tracking-tight text-ink">
               {heading}
             </h2>

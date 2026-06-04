@@ -94,15 +94,6 @@ body {
   color: var(--gold);
 }
 
-.eyebrow {
-  font-family: var(--font-sans);
-  text-transform: uppercase;
-  letter-spacing: 0.22em;
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: var(--gold);
-}
-
 /* Scroll-reveal: JS adds .is-in. Lighter blur to avoid scroll repaint cost. */
 .reveal {
   opacity: 0;

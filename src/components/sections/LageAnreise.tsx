@@ -21,16 +21,24 @@ export default function LageAnreise() {
         <Reveal>
           <div className="relative h-[360px] overflow-hidden rounded-[2rem] border border-line lg:h-full lg:min-h-[460px]">
             <MapClient lat={coords.lat} lng={coords.lng} label={name} />
-            <div className="pointer-events-none absolute bottom-4 left-4 rounded-full border border-line bg-bg/80 px-4 py-2 text-xs text-ink backdrop-blur-md">
+            <div className="pointer-events-none absolute bottom-4 left-4 z-[1000] rounded-full border border-line bg-bg/80 px-4 py-2 text-xs text-ink backdrop-blur-md">
               {adresse}
             </div>
+            <a
+              href={`https://www.google.com/maps/search/?api=1&query=${coords.lat},${coords.lng}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute right-4 top-4 z-[1000] inline-flex items-center gap-2 rounded-full bg-gold px-4 py-2 text-xs font-semibold text-white shadow-lg transition-colors hover:bg-gold-soft"
+            >
+              Auf Google Maps ansehen
+              <svg width="13" height="13" viewBox="0 0 14 14"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+            </a>
           </div>
         </Reveal>
 
         {/* Anreise modes */}
         <div className="flex flex-col justify-center">
           <Reveal>
-            <p className="eyebrow mb-4">Anreise</p>
             <h2 className="font-display text-[clamp(2rem,4.5vw,3.6rem)] font-extrabold leading-[1.02] tracking-tight text-ink">
               {heading}
             </h2>

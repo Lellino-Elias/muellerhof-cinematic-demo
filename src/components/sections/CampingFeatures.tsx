@@ -11,7 +11,6 @@ export default function CampingFeatures() {
       <div className="mx-auto max-w-[1320px] px-5 md:px-8">
         <Reveal>
           <div className="mb-12 max-w-2xl md:mb-16">
-            <p className="eyebrow mb-4">Das Herzstück</p>
             <h2 className="font-display text-[clamp(2rem,4.5vw,3.6rem)] font-extrabold leading-[1.02] tracking-tight text-ink">
               {heading}
             </h2>

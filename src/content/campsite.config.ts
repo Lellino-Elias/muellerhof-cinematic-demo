@@ -118,7 +118,7 @@ export const campsite: CampsiteConfig = {
     { label: "Ausgezeichneter Campingplatz", image: { src: `${IMG}/award25.png`, alt: "Auszeichnung Campingplatz 2025" } },
   ],
 
-  saison: { von: "April", bis: "Oktober" },
+  saison: { von: "Mai", bis: "September" },
 
   hero: {
     aerial: { src: `${IMG}/luft-titel2007-5247.webp`, alt: "Luftaufnahme des FKK-Camping Müllerhof am Keutschacher See" },
@@ -143,9 +143,9 @@ export const campsite: CampsiteConfig = {
     heading: "Mobilheime & Mietunterkünfte",
     intro: "Komfortabel wohnen mitten in der Natur — schlüsselfertig, stilvoll, direkt am See.",
     items: [
-      { name: "Nemo", kind: "Mobilheim", text: "Modernes Mobilheim mit überdachter Terrasse — ideal für Paare und kleine Familien.", image: { src: `${IMG}/fkk-wohnen6447-nemo.webp`, alt: "Mobilheim Nemo am Müllerhof" }, priceFrom: 89, features: ["bis 4 Personen", "Terrasse", "voll ausgestattet"] },
-      { name: "Ginger", kind: "Mobilheim", text: "Großzügiges Mobilheim mit viel Licht und Platz für entspannte Familientage.", image: { src: `${IMG}/fkk-wohnen6447-ginger.webp`, alt: "Mobilheim Ginger am Müllerhof" }, priceFrom: 95, features: ["bis 5 Personen", "2 Schlafzimmer", "Terrasse"] },
-      { name: "Mietwohnwagen", kind: "Mietwohnwagen", text: "Die unkomplizierte Art zu campen — fertig eingerichtet, einfach ankommen.", image: { src: `${IMG}/fkk-wohnen6404.webp`, alt: "Mietwohnwagen am Müllerhof" }, priceFrom: 65, features: ["bis 4 Personen", "Vorzelt", "sofort bezugsfertig"] },
+      { name: "Nemo", kind: "Mobilheim", text: "Modernes Mobilheim mit überdachter Terrasse — ideal für Paare und kleine Familien.", image: { src: `${IMG}/fkk-wohnen6447-nemo.webp`, alt: "Mobilheim Nemo am Müllerhof" }, priceFrom: 135, features: ["bis 4 Personen", "Terrasse", "voll ausgestattet"] },
+      { name: "Ginger", kind: "Mobilheim", text: "Großzügiges Mobilheim mit viel Licht und Platz für entspannte Familientage.", image: { src: `${IMG}/fkk-wohnen6447-ginger.webp`, alt: "Mobilheim Ginger am Müllerhof" }, priceFrom: 145, features: ["bis 5 Personen", "2 Schlafzimmer", "Terrasse"] },
+      { name: "Mietwohnwagen", kind: "Mietwohnwagen", text: "Die unkomplizierte Art zu campen — fertig eingerichtet, einfach ankommen.", image: { src: `${IMG}/fkk-wohnen6527-mietwohnwagen.webp`, alt: "Mietwohnwagen mit Vorzelt am Müllerhof" }, priceFrom: 120, features: ["bis 4 Personen", "Vorzelt", "sofort bezugsfertig"] },
     ],
   },
 
@@ -195,11 +195,12 @@ export const campsite: CampsiteConfig = {
   booking: {
     heading: "Buchen & Anfragen",
     intro: "Wähle Zeitraum, Unterkunft und Personen — wir melden uns mit deiner persönlichen Verfügbarkeit. Ohne Reservierungsgebühr.",
-    pricesArePlaceholder: true,
+    pricesArePlaceholder: false,
     categories: [
-      { id: "stellplatz", label: "Stellplatz", perNight: 28, perExtraGuest: 7 },
-      { id: "mietwohnwagen", label: "Mietwohnwagen", perNight: 65, perExtraGuest: 6 },
-      { id: "mobilheim", label: "Mobilheim", perNight: 89, perExtraGuest: 6 },
+      // Reale Preise lt. offizieller Müllerhof-Preisliste 2026 (Stellplatz = orange-Platz + 2 Erw., Vorsaison; Mietwohnwagen/Mobilheim = Basisnacht 2 Pers.)
+      { id: "stellplatz", label: "Stellplatz", perNight: 43, perExtraGuest: 15 },
+      { id: "mietwohnwagen", label: "Mietwohnwagen", perNight: 120, perExtraGuest: 0 },
+      { id: "mobilheim", label: "Mobilheim", perNight: 135, perExtraGuest: 0 },
     ],
   },
 
@@ -208,8 +209,8 @@ export const campsite: CampsiteConfig = {
     telHref: "tel:+4342732517",
     mail: "muellerhof@fkk-camping.at",
     facebook: "https://www.facebook.com/muellerhof/",
-    adresse: "Keutschach am See · Kärnten · Österreich",
-    coords: { lat: 46.5897, lng: 14.2272 },
+    adresse: "Dobein 10 · 9074 Keutschach am See · Kärnten",
+    coords: { lat: 46.57979, lng: 14.14966 },
   },
 
   story: {

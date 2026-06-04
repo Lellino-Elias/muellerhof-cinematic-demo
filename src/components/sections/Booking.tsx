@@ -36,7 +36,7 @@ function nightsBetween(a: string, b: string) {
 }
 
 export default function Booking() {
-  const { heading, intro, categories, pricesArePlaceholder } = campsite.booking;
+  const { heading, intro, categories } = campsite.booking;
   const notify = usePlaceholderToast();
   const bandRef = useRef<HTMLDivElement>(null);
 
@@ -78,7 +78,6 @@ export default function Booking() {
           <div className="tl-glow" style={{ width: "40rem", height: "40rem", right: "-14%", bottom: "-38%", background: "radial-gradient(circle, color-mix(in oklab, var(--lake) 38%, transparent), transparent 70%)", animation: "tl-drift 26s ease-in-out infinite reverse" }} />
         </div>
         <div className="relative mx-auto max-w-3xl px-5 py-32 text-center md:py-44">
-          <p className="eyebrow tl-up mb-7" style={{ transitionDelay: "0ms" }}>Dein Platz wartet</p>
           <h2 className="font-display text-[clamp(2.4rem,6vw,5rem)] font-extrabold leading-[1.0] tracking-tight text-ink">
             <span className="tl-word" style={{ transitionDelay: "120ms" }}>Bereit</span>{" "}
             <span className="tl-word" style={{ transitionDelay: "200ms" }}>für</span>{" "}
@@ -105,7 +104,6 @@ export default function Booking() {
       <div id="booking-widget" className="mx-auto max-w-[1320px] scroll-mt-24 px-5 pb-24 pt-16 md:px-8 md:pb-32">
         <Reveal>
           <div className="mb-12 max-w-2xl">
-            <p className="eyebrow mb-4">Verfügbarkeit & Preis</p>
             <h2 className="font-display text-[clamp(1.8rem,4vw,3rem)] font-extrabold leading-[1.02] tracking-tight text-ink">
               {heading}
             </h2>
@@ -182,9 +180,7 @@ export default function Booking() {
                   <div className="font-display mt-1 text-5xl font-extrabold tracking-tight text-ink">
                     €{animatedTotal}
                   </div>
-                  {pricesArePlaceholder && (
-                    <span className="mt-1 block text-[11px] text-muted">Richtpreis · unverbindlich · ohne Reservierungsgebühr</span>
-                  )}
+                  <span className="mt-1 block text-[11px] text-muted">Richtpreis ab 2 Pers. · je nach Saison · ohne Reservierungsgebühr</span>
                 </div>
                 <div className="flex flex-wrap gap-3">
                   <Magnetic>

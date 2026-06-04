@@ -81,7 +81,6 @@ export default function StorySection() {
       <div className="mx-auto max-w-[1320px] px-5 md:px-8">
         <Reveal>
           <div className="mb-14 max-w-2xl md:mb-20">
-            <p className="eyebrow mb-4">{story.kicker}</p>
             <h2 className="font-display text-[clamp(2rem,4.5vw,3.6rem)] font-extrabold leading-[1.02] tracking-tight text-ink">
               {story.heading}
             </h2>
@@ -108,8 +107,7 @@ export default function StorySection() {
                 }`}
               >
                 <span className="font-display block text-5xl font-extrabold text-gold/30">{c.no}</span>
-                <p className="eyebrow mt-4">{c.kicker}</p>
-                <h3 className="font-display mt-3 text-4xl font-bold leading-tight tracking-tight text-ink">
+                <h3 className="font-display mt-4 text-4xl font-bold leading-tight tracking-tight text-ink">
                   {c.title}
                 </h3>
                 <p className="mt-4 text-lg leading-relaxed text-muted">{c.text}</p>
@@ -169,8 +167,7 @@ export default function StorySection() {
               </div>
               <div className="mt-5">
                 <span className="font-display text-3xl font-extrabold text-gold/40">{c.no}</span>
-                <p className="eyebrow mt-2">{c.kicker}</p>
-                <h3 className="font-display mt-2 text-2xl font-bold tracking-tight text-ink">{c.title}</h3>
+                <h3 className="font-display mt-3 text-2xl font-bold tracking-tight text-ink">{c.title}</h3>
                 <p className="mt-3 text-base leading-relaxed text-muted">{c.text}</p>
               </div>
             </div>

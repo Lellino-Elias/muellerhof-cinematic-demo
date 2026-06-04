@@ -38,11 +38,13 @@ export function PlaceholderProvider({ children }: { children: React.ReactNode })
 export function NavLink({
   href,
   className = "",
+  style,
   children,
   onNavigate,
 }: {
   href: string;
   className?: string;
+  style?: React.CSSProperties;
   children: React.ReactNode;
   onNavigate?: () => void;
 }) {
@@ -60,7 +62,7 @@ export function NavLink({
     }
   };
   return (
-    <a href={href} onClick={handle} className={className}>
+    <a href={href} onClick={handle} className={className} style={style}>
       {children}
     </a>
   );

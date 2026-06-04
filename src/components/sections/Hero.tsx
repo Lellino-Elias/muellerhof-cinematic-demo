@@ -34,26 +34,34 @@ export default function Hero() {
       {/* Media */}
       <div ref={mediaRef} className="absolute inset-0 z-0 will-change-transform">
         <Img src={hero.src} alt={hero.alt} fill priority sizes="100vw" className="object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-black/10" />
-        <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/35 to-transparent" />
+        <div className="absolute inset-0 bg-black/20" />
+        <div
+          className="absolute inset-0"
+          style={{ background: "radial-gradient(ellipse 72% 62% at 50% 48%, rgba(0,0,0,0.52), transparent 75%)" }}
+        />
+        <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/45 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/40 to-transparent" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 mx-auto flex h-full max-w-[1320px] flex-col justify-end px-5 pb-24 md:px-8 md:pb-28">
-        <p className="mb-5 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.22em] text-white/85">
-          <span className="inline-block h-px w-8 bg-[#e6b667]" />
-          {campsite.region} · {campsite.see}
-        </p>
-
-        <h1 className="font-display max-w-4xl text-[clamp(2.6rem,6.5vw,5.5rem)] font-extrabold leading-[0.98] tracking-tight text-white">
+      <div className="relative z-10 mx-auto flex h-full max-w-[1320px] flex-col items-center justify-center px-5 text-center md:px-8">
+        <h1
+          className="font-display mx-auto max-w-4xl text-[clamp(2.6rem,6.5vw,5.5rem)] font-extrabold leading-[0.98] tracking-tight text-white"
+          style={{ textShadow: "0 2px 30px rgba(0,0,0,0.4)" }}
+        >
           {before}
           <span className="font-serif italic font-normal text-[#e6b667]">{claimEmphasis}</span>
           {after}
         </h1>
 
-        <p className="mt-6 max-w-xl text-base text-white/85 md:text-lg">{campsite.intro}</p>
+        <p
+          className="mx-auto mt-6 max-w-xl text-base text-white md:text-lg"
+          style={{ textShadow: "0 1px 18px rgba(0,0,0,0.6)" }}
+        >
+          {campsite.intro}
+        </p>
 
-        <div className="mt-9 flex flex-wrap items-center gap-4">
+        <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
           <Magnetic>
             <NavLink
               href="#booking"

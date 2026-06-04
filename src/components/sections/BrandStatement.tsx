@@ -6,13 +6,6 @@ export default function BrandStatement() {
     <section className="relative py-28 md:py-40">
       <div className="mx-auto max-w-[1320px] px-5 md:px-8">
         <Reveal>
-          <p className="eyebrow mb-7 flex items-center gap-3">
-            <span className="inline-block h-px w-8 bg-gold" />
-            Willkommen am {campsite.see}
-          </p>
-        </Reveal>
-
-        <Reveal delay={80}>
           <p className="font-display max-w-5xl text-[clamp(1.7rem,4vw,3.3rem)] font-semibold leading-[1.12] tracking-tight text-ink">
             <span className="emph">Freiheitsliebe</span>, Naturschönheit und echtes{" "}
             <span className="emph">Wohlfühlcamping</span> — hier wird Urlaub wieder zu dem, was er

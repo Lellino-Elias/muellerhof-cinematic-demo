@@ -24,7 +24,7 @@ export default function MapClient({
   return (
     <MapContainer
       center={[lat, lng]}
-      zoom={13}
+      zoom={15}
       scrollWheelZoom={false}
       style={{ height: "100%", width: "100%", background: "#efe8da" }}
       attributionControl={false}
