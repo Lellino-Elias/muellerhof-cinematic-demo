@@ -94,6 +94,14 @@ body {
   color: var(--gold);
 }
 
+/* Hero scroll cue — gentle bobbing chevron */
+@keyframes scroll-bob {
+  0%, 100% { transform: translateY(0); opacity: 0.6; }
+  50% { transform: translateY(7px); opacity: 1; }
+}
+.scroll-bob { animation: scroll-bob 1.8s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { .scroll-bob { animation: none; } }
+
 /* Scroll-reveal: JS adds .is-in. Lighter blur to avoid scroll repaint cost. */
 .reveal {
   opacity: 0;

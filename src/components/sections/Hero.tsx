@@ -82,9 +82,11 @@ export default function Hero() {
       </div>
 
       {/* Scroll cue */}
-      <div className="pointer-events-none absolute bottom-6 md:bottom-8 left-1/2 z-20 flex -translate-x-1/2 flex-col items-center gap-2 text-white/70">
-        <span className="text-[10px] uppercase tracking-[0.3em]">Scroll</span>
-        <span className="h-10 w-px animate-pulse bg-gradient-to-b from-[#e6b667] to-transparent" />
+      <div className="pointer-events-none absolute bottom-6 md:bottom-8 left-1/2 z-20 flex -translate-x-1/2 flex-col items-center gap-2.5 text-white/85">
+        <span className="text-[11px] uppercase tracking-[0.28em]">Scroll</span>
+        <svg className="scroll-bob h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M5 9.5 12 16l7-6.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
       </div>
     </section>
   );

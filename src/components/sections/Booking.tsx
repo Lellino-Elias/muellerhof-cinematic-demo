@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { campsite } from "@/content/campsite.config";
-import { usePlaceholderToast, NavLink } from "@/components/ui/Placeholder";
+import { usePlaceholderToast } from "@/components/ui/Placeholder";
 import Reveal from "@/components/ui/Reveal";
 import Magnetic from "@/components/ui/Magnetic";
 
@@ -36,25 +36,8 @@ function nightsBetween(a: string, b: string) {
 }
 
 export default function Booking() {
-  const { heading, intro, categories } = campsite.booking;
+  const { intro, categories } = campsite.booking;
   const notify = usePlaceholderToast();
-  const bandRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const el = bandRef.current;
-    if (!el) return;
-    const io = new IntersectionObserver(
-      ([e]) => {
-        if (e.isIntersecting) {
-          el.classList.add("tl-in");
-          io.disconnect();
-        }
-      },
-      { threshold: 0.25 },
-    );
-    io.observe(el);
-    return () => io.disconnect();
-  }, []);
 
   const [arrival, setArrival] = useState("2026-07-12");
   const [departure, setDeparture] = useState("2026-07-19");
@@ -71,46 +54,25 @@ export default function Booking() {
 
   return (
     <section id="booking" className="scroll-mt-24 bg-bg">
-      {/* Animated typographic transition into booking — no imagery */}
-      <div ref={bandRef} className="relative overflow-hidden">
+      {/* Booking heading — static, well-formatted (no word animation) */}
+      <div className="relative overflow-hidden">
         <div aria-hidden className="pointer-events-none absolute inset-0">
-          <div className="tl-glow" style={{ width: "44rem", height: "44rem", left: "-12%", top: "-34%", background: "radial-gradient(circle, color-mix(in oklab, var(--gold) 55%, transparent), transparent 70%)", animation: "tl-drift 20s ease-in-out infinite" }} />
-          <div className="tl-glow" style={{ width: "40rem", height: "40rem", right: "-14%", bottom: "-38%", background: "radial-gradient(circle, color-mix(in oklab, var(--lake) 38%, transparent), transparent 70%)", animation: "tl-drift 26s ease-in-out infinite reverse" }} />
+          <div className="tl-glow" style={{ width: "44rem", height: "44rem", left: "-12%", top: "-30%", background: "radial-gradient(circle, color-mix(in oklab, var(--gold) 48%, transparent), transparent 70%)" }} />
+          <div className="tl-glow" style={{ width: "40rem", height: "40rem", right: "-14%", bottom: "-34%", background: "radial-gradient(circle, color-mix(in oklab, var(--lake) 32%, transparent), transparent 70%)" }} />
         </div>
-        <div className="relative mx-auto max-w-3xl px-5 py-20 text-center md:py-44">
-          <h2 className="font-display text-[clamp(2rem,6vw,5rem)] font-extrabold leading-[1.05] tracking-tight text-ink">
-            <span className="tl-word" style={{ transitionDelay: "120ms" }}>Bereit</span>{" "}
-            <span className="tl-word" style={{ transitionDelay: "200ms" }}>für</span>{" "}
-            <span className="tl-word" style={{ transitionDelay: "280ms" }}>deinen</span>{" "}
-            <span className="tl-word font-serif italic font-normal text-gold" style={{ transitionDelay: "380ms" }}>eigenen</span>{" "}
-            <span className="tl-word" style={{ transitionDelay: "480ms" }}>Urlaub?</span>
-          </h2>
-          <p className="tl-up mx-auto mt-6 max-w-md text-base leading-relaxed text-muted md:text-lg" style={{ transitionDelay: "620ms" }}>
-            Frag unverbindlich an oder buche direkt — mit Platzgarantie und ohne Reservierungsgebühr.
-          </p>
-          <div className="tl-up mt-10 flex justify-center" style={{ transitionDelay: "740ms" }}>
-            <Magnetic>
-              <NavLink href="#booking-widget" className="inline-flex items-center gap-2 rounded-full bg-gold px-8 py-4 text-sm font-semibold text-white transition-colors hover:bg-gold-soft">
-                Verfügbarkeit prüfen
-                <svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 2.5v9M3.5 8 7 11.5 10.5 8" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
-              </NavLink>
-            </Magnetic>
-          </div>
-          <div className="tl-rule mx-auto mt-14 h-px w-40 bg-gold/50" />
+        <div className="relative mx-auto max-w-3xl px-5 pt-20 text-center md:px-8 md:pt-28">
+          <Reveal>
+            <h2 className="font-display text-[clamp(2.2rem,6vw,4.5rem)] font-extrabold leading-[1.05] tracking-tight text-ink">
+              Bereit für deinen <span className="font-serif italic font-normal text-gold">eigenen</span> Urlaub?
+            </h2>
+            <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-muted md:text-lg">{intro}</p>
+            <div className="mx-auto mt-9 h-px w-40 bg-gold/40" />
+          </Reveal>
         </div>
       </div>
 
       {/* Widget */}
-      <div id="booking-widget" className="mx-auto max-w-[1320px] scroll-mt-24 px-5 pb-24 pt-16 md:px-8 md:pb-32">
-        <Reveal>
-          <div className="mb-12 max-w-2xl">
-            <h2 className="font-display text-[clamp(1.8rem,4vw,3rem)] font-extrabold leading-[1.02] tracking-tight text-ink">
-              {heading}
-            </h2>
-            <p className="mt-5 text-base leading-relaxed text-muted">{intro}</p>
-          </div>
-        </Reveal>
-
+      <div id="booking-widget" className="mx-auto max-w-[1320px] scroll-mt-24 px-5 pb-24 pt-12 md:px-8 md:pb-32 md:pt-16">
         <div className="grid gap-6 lg:grid-cols-[1.55fr_1fr]">
           {/* Widget */}
           <Reveal>

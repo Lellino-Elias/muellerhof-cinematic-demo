@@ -12,7 +12,7 @@ export default function Kinder() {
       <div className="mx-auto grid max-w-[1320px] items-center gap-10 px-5 md:px-8 lg:grid-cols-2 lg:gap-16">
         {/* Lead image */}
         <Reveal>
-          <div className="relative aspect-[5/4] overflow-hidden rounded-[2rem] border border-line">
+          <div className="relative aspect-[5/4] overflow-hidden rounded-[2rem]">
             <Img
               src={lead.image.src}
               alt={lead.image.alt}
@@ -20,7 +20,6 @@ export default function Kinder() {
               sizes="(max-width:1024px) 100vw, 50vw"
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-bg/30 to-transparent" />
           </div>
         </Reveal>
 

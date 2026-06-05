@@ -19,7 +19,7 @@ export default function LageAnreise() {
       <div className="mx-auto grid max-w-[1320px] items-stretch gap-8 px-5 md:px-8 lg:grid-cols-2 lg:gap-12">
         {/* Map */}
         <Reveal>
-          <div className="relative h-[300px] sm:h-[360px] overflow-hidden rounded-[2rem] border border-line lg:h-full lg:min-h-[460px]">
+          <div className="relative h-[300px] sm:h-[360px] overflow-hidden rounded-[2rem] lg:h-full lg:min-h-[460px]">
             <MapClient lat={coords.lat} lng={coords.lng} label={name} />
             <div className="pointer-events-none absolute bottom-4 left-4 right-4 max-w-[calc(100%-2rem)] leading-snug z-[1000] rounded-full border border-line bg-bg/80 px-4 py-2 text-xs text-ink backdrop-blur-md">
               {adresse}

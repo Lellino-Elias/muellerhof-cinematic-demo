@@ -56,7 +56,7 @@ export default function Galerie() {
             {/* CTA / entry tile → full gallery page */}
             <NavLink
               href="#"
-              className="group relative flex aspect-[4/5] md:aspect-auto flex-col justify-between overflow-hidden rounded-3xl border border-white/10 p-5 md:p-6 text-white transition-transform duration-500 ease-out hover:-translate-y-1 md:h-full"
+              className="group relative flex aspect-[4/5] md:aspect-auto flex-col justify-between overflow-hidden rounded-3xl p-5 md:p-6 text-white transition-transform duration-500 ease-out hover:-translate-y-1 md:h-full"
               style={{ background: "radial-gradient(120% 90% at 18% 0%, color-mix(in oklab, var(--lake) 32%, var(--lake-deep)) 0%, transparent 60%), var(--lake-deep)" }}
             >
               <span aria-hidden className="pointer-events-none absolute -right-10 -top-10 h-[130px] w-[130px] rounded-full border border-gold/50 opacity-50" />

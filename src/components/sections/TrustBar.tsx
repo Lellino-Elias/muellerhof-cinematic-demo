@@ -49,7 +49,7 @@ export default function TrustBar() {
             {campsite.awards.map((a) =>
               a.image ? (
                 <figure key={a.label} className="flex w-[min(248px,82vw)] flex-col items-center gap-4">
-                  <div className="grid aspect-[1.42/1] w-full place-items-center rounded-3xl border border-line bg-surface px-7 py-6 shadow-[0_18px_40px_-22px_rgba(28,35,30,0.3)]">
+                  <div className="grid aspect-[1.42/1] w-full place-items-center rounded-3xl bg-surface px-7 py-6 shadow-[0_18px_40px_-22px_rgba(28,35,30,0.3)]">
                     <Image
                       src={a.image.src}
                       alt={a.image.alt}

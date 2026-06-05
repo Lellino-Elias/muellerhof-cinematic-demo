@@ -64,7 +64,7 @@ export default function Header() {
               </NavLink>
               {item.children && (
                 <div className="invisible absolute left-1/2 top-full w-60 -translate-x-1/2 translate-y-2 pt-3 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
-                  <div className="overflow-hidden rounded-2xl border border-line bg-surface p-2 shadow-2xl">
+                  <div className="overflow-hidden rounded-2xl bg-surface p-2 shadow-2xl">
                     {item.children.map((c) => (
                       <NavLink
                         key={c.label}

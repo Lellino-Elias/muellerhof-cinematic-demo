@@ -24,7 +24,7 @@ export default function Mobilheime() {
         <div className="grid gap-6 md:grid-cols-3">
           {items.map((m, i) => (
             <Reveal key={m.name} delay={i * 110}>
-              <article className="group flex h-full flex-col overflow-hidden rounded-[2rem] border border-line bg-surface">
+              <article className="group flex h-full flex-col overflow-hidden rounded-[2rem] bg-surface shadow-[0_14px_40px_-24px_rgba(28,35,30,0.22)]">
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Img
                     src={m.image.src}

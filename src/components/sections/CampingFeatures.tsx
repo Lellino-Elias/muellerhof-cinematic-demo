@@ -34,7 +34,7 @@ export default function CampingFeatures() {
           {/* Remaining — light surface cards: image on top, text below */}
           {rest.map((f, i) => (
             <Reveal key={f.title} delay={i * 80}>
-              <article className="group flex h-full flex-col overflow-hidden rounded-[2rem] border border-line bg-surface">
+              <article className="group flex h-full flex-col overflow-hidden rounded-[2rem] bg-surface shadow-[0_14px_40px_-24px_rgba(28,35,30,0.22)]">
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <Img src={f.image.src} alt={f.image.alt} fill sizes="(max-width:768px) 100vw, 33vw" className="object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105" />
                 </div>
