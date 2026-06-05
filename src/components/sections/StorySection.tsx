@@ -76,12 +76,12 @@ export default function StorySection() {
   const chapters = story.chapters;
 
   return (
-    <section id="story" className="relative scroll-mt-24 py-24 md:py-32">
+    <section id="story" className="relative scroll-mt-24 py-16 md:py-32">
       {/* Intro */}
       <div className="mx-auto max-w-[1320px] px-5 md:px-8">
         <Reveal>
-          <div className="mb-14 max-w-2xl md:mb-20">
-            <h2 className="font-display text-[clamp(2rem,4.5vw,3.6rem)] font-extrabold leading-[1.02] tracking-tight text-ink">
+          <div className="mb-10 max-w-2xl md:mb-20">
+            <h2 className="font-display text-[clamp(1.75rem,4.5vw,3.6rem)] font-extrabold leading-[1.02] tracking-tight text-ink">
               {story.heading}
             </h2>
             <p className="mt-5 text-base leading-relaxed text-muted">{story.intro}</p>
@@ -153,7 +153,7 @@ export default function StorySection() {
       </div>
 
       {/* MOBILE — stacked cards */}
-      <div className="mx-auto max-w-xl space-y-16 px-5 lg:hidden">
+      <div className="mx-auto max-w-xl space-y-12 px-5 md:space-y-16 lg:hidden">
         {chapters.map((c, i) => (
           <Reveal key={c.no}>
             <div>

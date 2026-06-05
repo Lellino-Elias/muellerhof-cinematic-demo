@@ -8,12 +8,12 @@ export default function Mobilheime() {
   const { heading, intro, items } = campsite.mobilheime;
 
   return (
-    <section id="mobilheime" className="scroll-mt-24 bg-bg2 py-24 md:py-32">
+    <section id="mobilheime" className="scroll-mt-24 bg-bg2 py-16 md:py-32">
       <div className="mx-auto max-w-[1320px] px-5 md:px-8">
         <Reveal>
-          <div className="mb-12 flex flex-wrap items-end justify-between gap-6 md:mb-16">
+          <div className="mb-10 flex flex-wrap items-end justify-between gap-6 md:mb-16">
             <div className="max-w-2xl">
-              <h2 className="font-display text-[clamp(2rem,4.5vw,3.6rem)] font-extrabold leading-[1.02] tracking-tight text-ink">
+              <h2 className="font-display text-[clamp(1.75rem,4.5vw,3.6rem)] font-extrabold leading-[1.02] tracking-tight text-ink">
                 {heading}
               </h2>
               <p className="mt-5 text-base leading-relaxed text-muted">{intro}</p>
@@ -33,7 +33,7 @@ export default function Mobilheime() {
                     sizes="(max-width:768px) 100vw, 33vw"
                     className="object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-110"
                   />
-                  <span className="absolute left-4 top-4 rounded-full bg-black/45 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white backdrop-blur-md">
+                  <span className="absolute left-4 top-4 rounded-full bg-black/45 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur-md">
                     {m.kind}
                   </span>
                 </div>
@@ -50,7 +50,7 @@ export default function Mobilheime() {
                   {m.features && (
                     <ul className="mt-4 flex flex-wrap gap-2">
                       {m.features.map((f) => (
-                        <li key={f} className="rounded-full border border-line px-2.5 py-1 text-[11px] text-ink/70">
+                        <li key={f} className="rounded-full border border-line px-2.5 py-1 text-xs text-ink/80">
                           {f}
                         </li>
                       ))}
@@ -58,7 +58,7 @@ export default function Mobilheime() {
                   )}
                   <NavLink
                     href="#booking"
-                    className="mt-6 inline-flex items-center gap-2 self-start text-sm font-semibold text-gold transition-colors hover:text-gold-soft"
+                    className="mt-6 -mx-1 inline-flex min-h-[44px] items-center gap-2 self-start px-1 py-2 text-sm font-semibold text-gold transition-colors hover:text-gold-soft"
                   >
                     Verfügbarkeit anfragen
                     <svg width="14" height="14" viewBox="0 0 14 14"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>

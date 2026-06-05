@@ -30,7 +30,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="top" ref={sectionRef} className="relative h-[100svh] min-h-[620px] w-full overflow-hidden bg-bg2">
+    <section id="top" ref={sectionRef} className="relative h-[100svh] min-h-[560px] w-full overflow-hidden bg-bg2">
       {/* Media */}
       <div ref={mediaRef} className="absolute inset-0 z-0 will-change-transform">
         <Img src={hero.src} alt={hero.alt} fill priority sizes="100vw" className="object-cover" />
@@ -46,7 +46,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 mx-auto flex h-full max-w-[1320px] flex-col items-center justify-center px-5 text-center md:px-8">
         <h1
-          className="font-display mx-auto max-w-4xl text-[clamp(2.6rem,6.5vw,5.5rem)] font-extrabold leading-[0.98] tracking-tight text-white"
+          className="font-display mx-auto max-w-4xl text-[clamp(2rem,9vw,5.5rem)] font-extrabold leading-[1.04] md:leading-[0.98] tracking-tight text-white [text-wrap:balance]"
           style={{ textShadow: "0 2px 30px rgba(0,0,0,0.4)" }}
         >
           {before}
@@ -61,11 +61,11 @@ export default function Hero() {
           {campsite.intro}
         </p>
 
-        <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
-          <Magnetic>
+        <div className="mt-7 flex w-full flex-col items-stretch justify-center gap-3 sm:mt-9 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
+          <Magnetic className="w-full justify-center sm:w-auto">
             <NavLink
               href="#booking"
-              className="inline-flex items-center gap-2 rounded-full bg-gold px-7 py-4 text-sm font-semibold text-white transition-colors hover:bg-gold-soft"
+              className="inline-flex items-center gap-2 rounded-full bg-gold px-7 py-4 text-sm font-semibold text-white transition-colors hover:bg-gold-soft w-full justify-center sm:w-auto"
             >
               Jetzt anfragen
               <svg width="15" height="15" viewBox="0 0 14 14"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
@@ -73,7 +73,7 @@ export default function Hero() {
           </Magnetic>
           <a
             href={campsite.kontakt.telHref}
-            className="inline-flex items-center gap-2 rounded-full border border-white/40 px-7 py-4 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/10"
+            className="inline-flex items-center gap-2 rounded-full border border-white/40 px-7 py-4 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/10 w-full justify-center sm:w-auto whitespace-nowrap"
           >
             <svg width="15" height="15" viewBox="0 0 16 16"><path d="M3 3.5c0 5 4.5 9.5 9.5 9.5l1.5-2.5-3-1.5-1.5 1.5C8 9.5 6.5 8 5.5 6.5L7 5 5.5 2 3 3.5Z" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinejoin="round" /></svg>
             {campsite.kontakt.tel}
@@ -82,7 +82,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll cue */}
-      <div className="pointer-events-none absolute bottom-8 left-1/2 z-20 hidden -translate-x-1/2 flex-col items-center gap-2 text-white/70 md:flex">
+      <div className="pointer-events-none absolute bottom-6 md:bottom-8 left-1/2 z-20 flex -translate-x-1/2 flex-col items-center gap-2 text-white/70">
         <span className="text-[10px] uppercase tracking-[0.3em]">Scroll</span>
         <span className="h-10 w-px animate-pulse bg-gradient-to-b from-[#e6b667] to-transparent" />
       </div>

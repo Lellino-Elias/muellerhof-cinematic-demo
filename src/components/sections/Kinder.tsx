@@ -8,7 +8,7 @@ export default function Kinder() {
   const lead = features[0];
 
   return (
-    <section id="kinder" className="scroll-mt-24 py-24 md:py-32">
+    <section id="kinder" className="scroll-mt-24 py-16 md:py-32">
       <div className="mx-auto grid max-w-[1320px] items-center gap-10 px-5 md:px-8 lg:grid-cols-2 lg:gap-16">
         {/* Lead image */}
         <Reveal>
@@ -20,23 +20,23 @@ export default function Kinder() {
               sizes="(max-width:1024px) 100vw, 50vw"
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-bg/50 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-bg/30 to-transparent" />
           </div>
         </Reveal>
 
         {/* Text + feature list */}
         <div>
           <Reveal>
-            <h2 className="font-display text-[clamp(2rem,4.5vw,3.6rem)] font-extrabold leading-[1.02] tracking-tight text-ink">
+            <h2 className="font-display text-[clamp(1.75rem,6vw,3.6rem)] font-extrabold leading-[1.08] md:leading-[1.02] tracking-tight text-ink">
               {heading}
             </h2>
             <p className="mt-5 max-w-lg text-base leading-relaxed text-muted">{intro}</p>
           </Reveal>
 
-          <div className="mt-10 space-y-px overflow-hidden rounded-3xl border border-line bg-line">
+          <div className="mt-8 md:mt-10 space-y-px overflow-hidden rounded-3xl border border-line bg-line">
             {features.map((f, i) => (
               <Reveal key={f.title} delay={i * 90}>
-                <div className="flex items-start gap-4 bg-bg p-6">
+                <div className="flex items-start gap-3 md:gap-4 bg-bg p-5 md:p-6">
                   <span className="font-display mt-0.5 text-sm font-bold text-gold">0{i + 1}</span>
                   <div>
                     <h3 className="font-display text-lg font-bold text-ink">{f.title}</h3>

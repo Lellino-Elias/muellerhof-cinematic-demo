@@ -42,7 +42,7 @@ export default function Header() {
           <span className={`font-display text-xl font-extrabold tracking-tight ${primary}`}>
             {campsite.shortName.toUpperCase()}
           </span>
-          <span className={`mt-0.5 text-[9px] font-semibold uppercase tracking-[0.28em] ${subtle}`}>
+          <span className={`mt-0.5 text-[10px] font-semibold uppercase tracking-[0.22em] ${subtle}`}>
             FKK-Camping · {campsite.see}
           </span>
         </NavLink>
@@ -109,9 +109,10 @@ export default function Header() {
 
           {/* Mobile toggle */}
           <button
-            aria-label="Menü öffnen"
+            aria-label={open ? "Menü schließen" : "Menü öffnen"}
+            aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
-            className={`flex h-10 w-10 items-center justify-center rounded-full border lg:hidden ${
+            className={`flex h-11 w-11 items-center justify-center rounded-full border lg:hidden ${
               light ? "border-white/40 text-white" : "border-line text-ink"
             }`}
           >
@@ -135,13 +136,13 @@ export default function Header() {
         <div className="mx-auto flex h-full max-w-[1320px] flex-col gap-1 overflow-y-auto px-6 pb-10 pt-28">
           {campsite.nav.map((item) => (
             <div key={item.label} className="border-b border-line/60 py-3">
-              <NavLink href={item.href} onNavigate={() => setOpen(false)} className="font-display text-2xl font-bold text-ink">
+              <NavLink href={item.href} onNavigate={() => setOpen(false)} className="block py-1 font-display text-2xl font-bold text-ink">
                 {item.label}
               </NavLink>
               {item.children && (
-                <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1">
+                <div className="mt-2 flex flex-wrap gap-x-2 gap-y-1">
                   {item.children.map((c) => (
-                    <NavLink key={c.label} href={c.href} onNavigate={() => setOpen(false)} className="text-sm text-muted hover:text-gold">
+                    <NavLink key={c.label} href={c.href} onNavigate={() => setOpen(false)} className="inline-flex min-h-[40px] items-center rounded-lg px-2 py-1.5 text-sm text-muted hover:text-gold">
                       {c.label}
                     </NavLink>
                   ))}

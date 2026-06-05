@@ -53,7 +53,7 @@ export default function Aktivitaeten() {
 
   return (
     <section ref={sectionRef} id="aktivitaeten" className="relative overflow-hidden">
-      <div className="flex flex-col py-24 md:py-28 lg:min-h-screen lg:justify-center lg:py-0">
+      <div className="flex flex-col py-16 md:py-24 lg:min-h-screen lg:justify-center lg:py-0">
         <div className="mx-auto w-full max-w-[1320px] px-5 md:px-8">
           <Reveal>
             <div className="mb-10 flex flex-wrap items-end justify-between gap-4 md:mb-12">
@@ -63,7 +63,7 @@ export default function Aktivitaeten() {
                 </h2>
                 <p className="mt-5 text-base leading-relaxed text-muted">{intro}</p>
               </div>
-              <span className="text-xs uppercase tracking-[0.2em] text-muted lg:hidden">← seitwärts wischen →</span>
+              <span className="text-[13px] uppercase tracking-[0.12em] text-muted sm:text-xs sm:tracking-[0.2em] lg:hidden">← seitwärts wischen →</span>
             </div>
           </Reveal>
         </div>
@@ -76,9 +76,9 @@ export default function Aktivitaeten() {
           {items.map((a) => (
             <article
               key={a.title}
-              className="group relative h-[420px] w-[80vw] shrink-0 snap-start overflow-hidden rounded-[2rem] sm:w-[400px]"
+              className="group relative h-[360px] sm:h-[420px] w-[80vw] shrink-0 snap-start overflow-hidden rounded-[2rem] sm:w-[400px]"
             >
-              <Img src={a.image.src} alt={a.image.alt} fill sizes="400px" className="object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-110" />
+              <Img src={a.image.src} alt={a.image.alt} fill sizes="(min-width:640px) 400px, 80vw" className="object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-110" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
               <div className="absolute bottom-0 left-0 p-7">
                 <h3 className="font-display text-2xl font-bold text-white">{a.title}</h3>

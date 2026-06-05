@@ -23,7 +23,7 @@ export default function Galerie() {
                 Morgenlicht über dem türkisen See, lange Sommerabende auf der Terrasse, ein eigener Platz im Grünen — ein paar Eindrücke vom Müllerhof.
               </p>
             </div>
-            <div className="flex items-center gap-2.5 whitespace-nowrap pb-1.5 text-sm text-muted">
+            <div className="flex items-center gap-2.5 whitespace-normal md:whitespace-nowrap pb-1.5 text-sm text-muted">
               <span className="inline-block h-[5px] w-[5px] rounded-full bg-gold" />
               Ausgewählte Aufnahmen · <b className="font-medium text-ink">Frühjahr bis Herbst</b>
             </div>
@@ -56,17 +56,17 @@ export default function Galerie() {
             {/* CTA / entry tile → full gallery page */}
             <NavLink
               href="#"
-              className="group relative flex aspect-[4/3] flex-col justify-between overflow-hidden rounded-3xl border border-white/10 p-6 text-white transition-transform duration-500 ease-out hover:-translate-y-1 md:aspect-auto md:h-full"
+              className="group relative flex aspect-[4/5] md:aspect-auto flex-col justify-between overflow-hidden rounded-3xl border border-white/10 p-5 md:p-6 text-white transition-transform duration-500 ease-out hover:-translate-y-1 md:h-full"
               style={{ background: "radial-gradient(120% 90% at 18% 0%, color-mix(in oklab, var(--lake) 32%, var(--lake-deep)) 0%, transparent 60%), var(--lake-deep)" }}
             >
               <span aria-hidden className="pointer-events-none absolute -right-10 -top-10 h-[130px] w-[130px] rounded-full border border-gold/50 opacity-50" />
-              <span className="font-display text-[2.85rem] font-extrabold leading-[0.92] tracking-tight">
+              <span className="font-display text-[2.1rem] md:text-[2.85rem] font-extrabold leading-[0.92] tracking-tight">
                 +24
-                <span className="mt-2 block font-serif text-base italic font-normal leading-snug text-[#e7d9c4]">Fotos in der<br />vollen Galerie</span>
+                <span className="mt-2 block font-serif text-base italic font-normal leading-snug text-[#e7d9c4]">Fotos in der vollen Galerie</span>
               </span>
               <span className="relative z-10 mt-3 flex items-center justify-between gap-2 border-t border-white/15 pt-3.5 text-[0.98rem] font-semibold">
                 Zur Galerie
-                <span className="inline-flex h-[34px] w-[34px] shrink-0 items-center justify-center rounded-full bg-gold text-white transition-transform duration-500 group-hover:translate-x-1">
+                <span className="inline-flex h-11 w-11 md:h-[34px] md:w-[34px] shrink-0 items-center justify-center rounded-full bg-gold text-white transition-transform duration-500 group-hover:translate-x-1">
                   <svg width="15" height="15" viewBox="0 0 14 14"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg>
                 </span>
               </span>

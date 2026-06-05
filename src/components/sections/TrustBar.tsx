@@ -4,7 +4,7 @@ import { campsite } from "@/content/campsite.config";
 
 export default function TrustBar() {
   return (
-    <section className="relative overflow-hidden border-y border-line bg-bg2 px-5 py-24 md:px-8 md:py-28">
+    <section className="relative overflow-hidden border-y border-line bg-bg2 px-5 py-16 md:px-8 md:py-28">
       {/* faint warm/lake wash */}
       <div
         aria-hidden
@@ -17,7 +17,7 @@ export default function TrustBar() {
 
       <div className="relative mx-auto max-w-[1080px] text-center">
         <Reveal>
-          <h2 className="font-display mx-auto max-w-[20ch] text-[clamp(2.1rem,4vw,3.05rem)] font-extrabold leading-[1.03] tracking-tight text-ink">
+          <h2 className="font-display mx-auto max-w-[20ch] text-[clamp(1.85rem,7vw,3.05rem)] font-extrabold leading-[1.08] md:leading-[1.03] tracking-tight text-ink">
             Worauf du dich <span className="font-serif italic font-normal text-gold">verlassen</span> kannst
           </h2>
           <p className="mx-auto mt-5 max-w-[52ch] text-base leading-relaxed text-muted md:text-lg">
@@ -27,11 +27,11 @@ export default function TrustBar() {
         </Reveal>
 
         <Reveal delay={120}>
-          <ul className="mx-auto mt-11 flex max-w-[880px] flex-wrap justify-center gap-3.5">
+          <ul className="mx-auto mt-8 md:mt-11 flex max-w-[880px] flex-wrap justify-center gap-3.5">
             {campsite.usps.map((u) => (
               <li
                 key={u}
-                className="inline-flex items-center gap-2.5 rounded-full border border-line bg-surface/60 py-3 pl-4 pr-5 text-sm font-medium text-ink shadow-[0_1px_0_rgba(255,255,255,0.7)_inset]"
+                className="inline-flex max-w-full items-center gap-2.5 rounded-full border border-line bg-surface/60 py-2.5 pl-3.5 pr-4 sm:py-3 sm:pl-4 sm:pr-5 text-sm font-medium text-ink shadow-[0_1px_0_rgba(255,255,255,0.7)_inset]"
               >
                 <span className="grid h-[22px] w-[22px] shrink-0 place-items-center rounded-full bg-gold/10">
                   <svg width="13" height="13" viewBox="0 0 16 16" className="text-gold">
@@ -45,10 +45,10 @@ export default function TrustBar() {
         </Reveal>
 
         <Reveal delay={220}>
-          <div className="mt-14 flex flex-wrap items-stretch justify-center gap-7">
+          <div className="mt-10 md:mt-14 flex flex-wrap items-stretch justify-center gap-5 md:gap-7">
             {campsite.awards.map((a) =>
               a.image ? (
-                <figure key={a.label} className="flex w-[248px] flex-col items-center gap-4">
+                <figure key={a.label} className="flex w-[min(248px,82vw)] flex-col items-center gap-4">
                   <div className="grid aspect-[1.42/1] w-full place-items-center rounded-3xl border border-line bg-surface px-7 py-6 shadow-[0_18px_40px_-22px_rgba(28,35,30,0.3)]">
                     <Image
                       src={a.image.src}

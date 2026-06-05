@@ -15,20 +15,20 @@ export default function LageAnreise() {
   const name = campsite.name;
 
   return (
-    <section id="anreise" className="scroll-mt-24 py-24 md:py-32">
+    <section id="anreise" className="scroll-mt-24 py-16 md:py-24 lg:py-32">
       <div className="mx-auto grid max-w-[1320px] items-stretch gap-8 px-5 md:px-8 lg:grid-cols-2 lg:gap-12">
         {/* Map */}
         <Reveal>
-          <div className="relative h-[360px] overflow-hidden rounded-[2rem] border border-line lg:h-full lg:min-h-[460px]">
+          <div className="relative h-[300px] sm:h-[360px] overflow-hidden rounded-[2rem] border border-line lg:h-full lg:min-h-[460px]">
             <MapClient lat={coords.lat} lng={coords.lng} label={name} />
-            <div className="pointer-events-none absolute bottom-4 left-4 z-[1000] rounded-full border border-line bg-bg/80 px-4 py-2 text-xs text-ink backdrop-blur-md">
+            <div className="pointer-events-none absolute bottom-4 left-4 right-4 max-w-[calc(100%-2rem)] leading-snug z-[1000] rounded-full border border-line bg-bg/80 px-4 py-2 text-xs text-ink backdrop-blur-md">
               {adresse}
             </div>
             <a
               href={`https://www.google.com/maps/search/?api=1&query=${coords.lat},${coords.lng}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="absolute right-4 top-4 z-[1000] inline-flex items-center gap-2 rounded-full bg-gold px-4 py-2 text-xs font-semibold text-white shadow-lg transition-colors hover:bg-gold-soft"
+              className="absolute right-3 top-3 z-[1000] inline-flex items-center gap-2 rounded-full bg-gold px-4 py-2.5 text-[13px] min-h-[44px] md:right-4 md:top-4 md:py-2 md:text-xs md:min-h-0 font-semibold text-white shadow-lg transition-colors hover:bg-gold-soft"
             >
               Auf Google Maps ansehen
               <svg width="13" height="13" viewBox="0 0 14 14"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>

@@ -77,8 +77,8 @@ export default function Booking() {
           <div className="tl-glow" style={{ width: "44rem", height: "44rem", left: "-12%", top: "-34%", background: "radial-gradient(circle, color-mix(in oklab, var(--gold) 55%, transparent), transparent 70%)", animation: "tl-drift 20s ease-in-out infinite" }} />
           <div className="tl-glow" style={{ width: "40rem", height: "40rem", right: "-14%", bottom: "-38%", background: "radial-gradient(circle, color-mix(in oklab, var(--lake) 38%, transparent), transparent 70%)", animation: "tl-drift 26s ease-in-out infinite reverse" }} />
         </div>
-        <div className="relative mx-auto max-w-3xl px-5 py-32 text-center md:py-44">
-          <h2 className="font-display text-[clamp(2.4rem,6vw,5rem)] font-extrabold leading-[1.0] tracking-tight text-ink">
+        <div className="relative mx-auto max-w-3xl px-5 py-20 text-center md:py-44">
+          <h2 className="font-display text-[clamp(2rem,6vw,5rem)] font-extrabold leading-[1.05] tracking-tight text-ink">
             <span className="tl-word" style={{ transitionDelay: "120ms" }}>Bereit</span>{" "}
             <span className="tl-word" style={{ transitionDelay: "200ms" }}>für</span>{" "}
             <span className="tl-word" style={{ transitionDelay: "280ms" }}>deinen</span>{" "}
@@ -134,7 +134,7 @@ export default function Booking() {
                   <button
                     aria-label="weniger"
                     onClick={() => setGuests((g) => Math.max(1, g - 1))}
-                    className="flex h-8 w-8 items-center justify-center rounded-full border border-line text-lg text-ink transition-colors hover:border-gold/60 hover:text-gold"
+                    className="flex h-11 w-11 sm:h-9 sm:w-9 items-center justify-center rounded-full border border-line text-lg text-ink transition-colors hover:border-gold/60 hover:text-gold"
                   >
                     −
                   </button>
@@ -142,7 +142,7 @@ export default function Booking() {
                   <button
                     aria-label="mehr"
                     onClick={() => setGuests((g) => Math.min(8, g + 1))}
-                    className="flex h-8 w-8 items-center justify-center rounded-full border border-line text-lg text-ink transition-colors hover:border-gold/60 hover:text-gold"
+                    className="flex h-11 w-11 sm:h-9 sm:w-9 items-center justify-center rounded-full border border-line text-lg text-ink transition-colors hover:border-gold/60 hover:text-gold"
                   >
                     +
                   </button>
@@ -177,10 +177,10 @@ export default function Booking() {
                   <span className="text-xs uppercase tracking-wider text-muted">
                     Gesamt · {cat.label} · {guests} Pers. · {nights} {nights === 1 ? "Nacht" : "Nächte"}
                   </span>
-                  <div className="font-display mt-1 text-5xl font-extrabold tracking-tight text-ink">
+                  <div className="font-display mt-1 text-4xl sm:text-5xl font-extrabold tracking-tight text-ink">
                     €{animatedTotal}
                   </div>
-                  <span className="mt-1 block text-[11px] text-muted">Richtpreis ab 2 Pers. · je nach Saison · ohne Reservierungsgebühr</span>
+                  <span className="mt-1 block text-xs leading-snug text-muted">Richtpreis ab 2 Pers. · je nach Saison · ohne Reservierungsgebühr</span>
                 </div>
                 <div className="flex flex-wrap gap-3">
                   <Magnetic>
@@ -232,7 +232,7 @@ export default function Booking() {
               <a href={campsite.kontakt.telHref} className="text-sm text-ink/85 transition-colors hover:text-gold">
                 ☎ {campsite.kontakt.tel}
               </a>
-              <a href={`mailto:${campsite.kontakt.mail}`} className="-mt-3 text-sm text-ink/85 transition-colors hover:text-gold">
+              <a href={`mailto:${campsite.kontakt.mail}`} className="-mt-3 break-all text-sm text-ink/85 transition-colors hover:text-gold">
                 ✉ {campsite.kontakt.mail}
               </a>
             </div>

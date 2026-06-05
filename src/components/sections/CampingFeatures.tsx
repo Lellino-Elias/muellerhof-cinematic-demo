@@ -7,7 +7,7 @@ export default function CampingFeatures() {
   const [lead, ...rest] = features;
 
   return (
-    <section id="camping" className="scroll-mt-24 py-24 md:py-32">
+    <section id="camping" className="scroll-mt-24 py-16 md:py-32">
       <div className="mx-auto max-w-[1320px] px-5 md:px-8">
         <Reveal>
           <div className="mb-12 max-w-2xl md:mb-16">
@@ -21,10 +21,10 @@ export default function CampingFeatures() {
         <div className="grid gap-5 md:grid-cols-3 md:grid-rows-2">
           {/* Lead feature — large image with white text */}
           <Reveal className="md:col-span-2 md:row-span-2">
-            <article className="group relative h-full min-h-[360px] overflow-hidden rounded-[2rem]">
+            <article className="group relative h-full min-h-[300px] md:min-h-[360px] overflow-hidden rounded-[2rem]">
               <Img src={lead.image.src} alt={lead.image.alt} fill sizes="(max-width:768px) 100vw, 66vw" className="object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" />
-              <div className="absolute bottom-0 left-0 p-8 md:p-10">
+              <div className="absolute bottom-0 left-0 p-6 md:p-10">
                 <h3 className="font-display text-3xl font-bold text-white md:text-4xl">{lead.title}</h3>
                 <p className="mt-2 max-w-md text-sm text-white/85">{lead.text}</p>
               </div>
@@ -40,7 +40,7 @@ export default function CampingFeatures() {
                 </div>
                 <div className="p-5">
                   <h3 className="font-display text-lg font-bold text-ink">{f.title}</h3>
-                  <p className="mt-1.5 text-xs leading-relaxed text-muted">{f.text}</p>
+                  <p className="mt-1.5 text-sm md:text-xs leading-relaxed text-muted">{f.text}</p>
                 </div>
               </article>
             </Reveal>
