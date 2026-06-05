@@ -32,25 +32,20 @@ export default function Galerie() {
 
         <Reveal delay={80}>
           <div className="grid grid-cols-2 gap-3.5 md:grid-cols-4 md:[grid-template-rows:260px_260px]">
-            {/* Feature aerial */}
+            {/* Feature tile */}
             <figure className={`${tile} col-span-2 aspect-[16/10] md:row-span-2 md:aspect-auto md:h-full`}>
               <Img src={g[0].src} alt={g[0].alt} fill sizes="(max-width:768px) 100vw, 50vw" className={photo} />
-              <span className="pointer-events-none absolute inset-0" style={{ background: "linear-gradient(to top, rgba(15,30,26,0.32) 0%, rgba(15,30,26,0) 38%)" }} />
-              <figcaption className="absolute bottom-5 left-5 inline-flex items-center gap-2.5 rounded-full bg-bg/90 px-4 py-2.5 text-xs font-semibold text-ink shadow-lg backdrop-blur-sm">
-                <span className="inline-block h-[7px] w-[7px] rounded-full bg-lake shadow-[0_0_0_4px_rgba(44,123,114,0.18)]" />
-                Direkt am Keutschacher See
-              </figcaption>
             </figure>
 
             {/* Three supporting tiles */}
             <figure className={`${tile} aspect-[4/3] md:aspect-auto md:h-full`}>
+              <Img src={g[1].src} alt={g[1].alt} fill sizes="(max-width:768px) 50vw, 25vw" className={photo} />
+            </figure>
+            <figure className={`${tile} aspect-[4/3] md:aspect-auto md:h-full`}>
               <Img src={g[2].src} alt={g[2].alt} fill sizes="(max-width:768px) 50vw, 25vw" className={photo} />
             </figure>
             <figure className={`${tile} aspect-[4/3] md:aspect-auto md:h-full`}>
-              <Img src={g[6].src} alt={g[6].alt} fill sizes="(max-width:768px) 50vw, 25vw" className={photo} />
-            </figure>
-            <figure className={`${tile} aspect-[4/3] md:aspect-auto md:h-full`}>
-              <Img src={g[4].src} alt={g[4].alt} fill sizes="(max-width:768px) 50vw, 25vw" className={photo} />
+              <Img src={g[3].src} alt={g[3].alt} fill sizes="(max-width:768px) 50vw, 25vw" className={photo} />
             </figure>
 
             {/* CTA / entry tile → full gallery page */}

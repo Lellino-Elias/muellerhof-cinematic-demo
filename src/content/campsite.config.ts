@@ -51,7 +51,7 @@ export interface CampsiteConfig {
   claim: string;
   claimEmphasis: string; // Wort/Phrase im Headline, das hervorgehoben (serif italic) wird
   intro: string;
-  pillars: { title: string; text: string }[];
+  pillars: { title: string; text: string; image: ImageRef }[];
   usps: string[];
   awards: { label: string; image?: ImageRef }[];
   saison: { von: string; bis: string };
@@ -98,9 +98,9 @@ export const campsite: CampsiteConfig = {
     "Viel Platz und Privatsphäre in sonniger Natur — direkt am Naturbadesee mit Trinkwasserqualität. Spontan buchen mit Platzgarantie, ganz ohne Reservierungsgebühr.",
 
   pillars: [
-    { title: "Freiheitsliebe", text: "Pure Entspannung am Naturbadesee mit Trinkwasserqualität." },
-    { title: "Naturschönheit", text: "Pure Erholung in einer idyllischen Landschaft am Wörthersee." },
-    { title: "Wohlfühlcamping", text: "Gepflegte Anlage, TOP-Seerestaurant und WLAN auf dem ganzen Gelände." },
+    { title: "Freiheitsliebe", text: "Pure Entspannung am Naturbadesee mit Trinkwasserqualität.", image: { src: `${IMG}/163-6376_sonnenu.webp`, alt: "Abendstimmung am ruhigen Naturbadesee" } },
+    { title: "Naturschönheit", text: "Pure Erholung in einer idyllischen Landschaft am Wörthersee.", image: { src: `${IMG}/luft1.webp`, alt: "Idyllische Landschaft am See aus der Luft" } },
+    { title: "Wohlfühlcamping", text: "Gepflegte Anlage, TOP-Seerestaurant und WLAN auf dem ganzen Gelände.", image: { src: `${IMG}/rest08-terrasse-6315.webp`, alt: "Ruhige Terrasse des Seerestaurants am See" } },
   ],
 
   usps: [
@@ -130,11 +130,11 @@ export const campsite: CampsiteConfig = {
     intro:
       "Ein Platz, der atmet: weite Stellplätze in der Sonne, drei eigene Badestrände und ein See in Trinkwasserqualität — Erholung, wie sie sein soll.",
     features: [
-      { title: "Traumlage", text: "Eingebettet in die idyllische Landschaft am Keutschacher See, mitten in der Region Wörthersee.", image: { src: `${IMG}/luft1.webp`, alt: "Traumlage am Keutschacher See aus der Luft" } },
+      { title: "Traumlage", text: "Eingebettet in die idyllische Landschaft am Keutschacher See, mitten in der Region Wörthersee.", image: { src: `${IMG}/luft2.webp`, alt: "Traumlage am Keutschacher See aus der Luft" } },
       { title: "Stellplätze", text: "Großzügige, sonnige Stellplätze mit viel Platz und Privatsphäre — direkt am Wasser oder im Grünen.", image: { src: `${IMG}/fkk_165915.webp`, alt: "Sonnige Stellplätze am Müllerhof" } },
       { title: "Drei Badestrände", text: "Gleich drei eigene Badestrände laden zum Schwimmen im glasklaren Naturbadesee ein.", image: { src: `${IMG}/fkk_165896.webp`, alt: "Badestrand am Keutschacher See" } },
-      { title: "Sanitäreinrichtung", text: "Gepflegte, moderne Sanitäranlagen sorgen für Komfort während des gesamten Aufenthalts.", image: { src: `${IMG}/fkk_165905.webp`, alt: "Gepflegte Anlage am Müllerhof" } },
-      { title: "Seerestaurant", text: "Kulinarischer Genuss mit Seeblick: das TOP-Seerestaurant verwöhnt von früh bis spät.", image: { src: `${IMG}/rest08-terrasse-6315.webp`, alt: "Seerestaurant mit Terrasse am Müllerhof" } },
+      { title: "Sanitäreinrichtung", text: "Gepflegte, moderne Sanitäranlagen sorgen für Komfort während des gesamten Aufenthalts.", image: { src: `${IMG}/fkk_165910.webp`, alt: "Gepflegte, ruhige Anlage am Müllerhof" } },
+      { title: "Seerestaurant", text: "Kulinarischer Genuss mit Seeblick: das TOP-Seerestaurant verwöhnt von früh bis spät.", image: { src: `${IMG}/rest08-terrasse6303.webp`, alt: "Gäste auf der Terrasse des Seerestaurants" } },
       { title: "Der kleine Laden", text: "Frische Brötchen und alles für den täglichen Bedarf — direkt am Platz.", image: { src: `${IMG}/shop-0854.webp`, alt: "Der kleine Laden am Campingplatz" } },
     ],
   },
@@ -181,15 +181,12 @@ export const campsite: CampsiteConfig = {
     ],
   },
 
+  // Teaser-Galerie — alle Bilder einzigartig (keine Dopplung mit den Sektionen oben).
   galerie: [
-    { src: `${IMG}/luft2.webp`, alt: "Luftaufnahme des Campingplatzes am See" },
-    { src: `${IMG}/fkk_165913.webp`, alt: "Idylle am Keutschacher See" },
-    { src: `${IMG}/rest08-terrasse6303.webp`, alt: "Terrasse des Seerestaurants" },
-    { src: `${IMG}/fkk-wohnen6-6716.webp`, alt: "Wohnen am Müllerhof" },
+    { src: `${IMG}/fkk_165898.webp`, alt: "Sonniger Campingtag am Platz" },
     { src: `${IMG}/fkk_165903.webp`, alt: "Stellplatz im Grünen" },
-    { src: `${IMG}/shop-0867.webp`, alt: "Der kleine Laden" },
-    { src: `${IMG}/fkk_165898.webp`, alt: "Sonniger Tag am See" },
-    { src: `${IMG}/fkk_165910.webp`, alt: "Natur am Keutschacher See" },
+    { src: `${IMG}/shop-0867.webp`, alt: "Der kleine Laden am Platz" },
+    { src: `${IMG}/fkk-wohnen6404.webp`, alt: "Wohnkomfort in der Mietunterkunft" },
   ],
 
   booking: {
